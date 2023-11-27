@@ -178,8 +178,8 @@ __   __  __   __  _______  _______  __   __  __   __  ___   ___
 |_|   |_||_______||_______||__| |__||_|   |_||_|   |_||___| |_______|
 \033[1;93m--------------------------------------------------
 \033[1;37m[-] OWNER     :\033[1;32m MUZZI TRICKER
-\033[1;37m[-] FACEBOOK    :\033[1;32m MUZAMMIL HUSSAIN
-\033[1;37m[-] VERSION   :\033[1;32m 1.0
+\033[1;37m[-] FACEBOOK   :\033[1;32m MUZAMMIL HUSSAIN
+\033[1;37m[-] VERSION   :\033[1;32m A1.0
 \033[1;37m[-] STATUS    :\033[1;32m Paid
 --------------------------------------------------""")
 def linex():
@@ -530,6 +530,8 @@ def fcrack(uid,pwx,tl):
 			"login":"Log In"}
 			header_freefb = {
     'authority': 'x.facebook.com',
+    'method': 'GET', 
+    'scheme': 'https', 
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-US,en;q=0.9',
     'cache-control': 'max-age=0',
